@@ -1,0 +1,168 @@
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+}
+
+.section1 {
+    width: 100%;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.boxLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxLogo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxLogo a div {
+    background-color: var(--colorBlanco);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+}
+
+.boxLogo a div img {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 16/9;
+}
+
+.boxLogo a p {
+    padding: 0;
+    margin: 0 0 0 10px;
+    color: var(--colorBlanco);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.boxNosotros {
+    width: 500px;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boxNosotros h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colorBlanco);
+}
+
+.boxNosotros p {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--colorBlanco);
+}
+
+.boxRedes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxRedes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--fondo);
+    color: var(--color-1);
+    margin: 7.5px;
+    padding: 9px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boxRedes a:hover {
+    background-color: var(--color3);
+    color: var(--colorBlanco);
+    transition: 0.2s linear;
+}
+
+.boxRedes a i {
+    font-size: 1.5rem;
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: var(--color3);
+    color: var(--colorBlanco);
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width:720px) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    .boxLogo {
+        margin: 10px;
+    }
+
+    .boxNosotros {
+        width: auto;
+        margin: 10px;
+        padding: 0;
+        align-items: center;
+    }
+
+    .boxNosotros p {
+        text-align: center;
+    }
+}
+
+@media (max-width:400px) {
+    .section1 {
+        padding: 10px;
+    }
+
+    .boxLogo a div img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .boxLogo a p {
+        font-size: 0.8rem;
+    }
+
+    .boxNosotros h3 {
+        font-size: 1rem;
+    }
+
+    .boxNosotros p {
+        font-size: 0.8rem;
+    }
+
+    .boxRedes a i {
+        font-size: 1rem;
+    }
+
+    .section2 {
+        font-size: 0.8rem;
+    }
+}

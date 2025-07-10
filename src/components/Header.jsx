@@ -31,10 +31,10 @@ const Header = () => {
 
                 <ul className={`${styles.navLink} ${menuOpen ? styles.showMenu : ''}`}>
                     <li><Link to="/" className={styles.link}><i className="fa-solid fa-house"></i> Home</Link></li>
-                    <li><Link to="/servicios" className={styles.link}><i className="fa-solid fa-shield-dog"></i> Servicios</Link></li>
-                    <li><Link to="/tips" className={styles.link}><i className="fa-solid fa-circle-info"></i> Tips</Link></li>
-                    <button className={styles.iniciarSesion}><i class="fa-solid fa-cart-shopping"></i> Carrito</button>
+                    <li><Link to="/nosotros" className={styles.link}><i className="fa-solid fa-circle-info"></i> Nosotros</Link></li>
+                    <li><Link to="/Contacto" className={styles.link}><i className="fa-solid fa-phone"></i> Contacto</Link></li>
                     <button className={styles.iniciarSesion}>Iniciar Sesión</button>
+                    <button className={styles.iniciarSesion}>Registrarse</button>
                 </ul>
 
                 <div className={styles.toggleBtn}>

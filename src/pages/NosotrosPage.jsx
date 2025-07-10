@@ -1,7 +1,7 @@
 const NosotrosPage = () => {
     return (
         <div>
-            Hola
+            Nosotros
         </div>
     )
 }

@@ -10,7 +10,7 @@ const Footer = () => {
                     <div>
                     <img src="img/Logo.png" alt="Logo-pie-de-pagina" />
                     </div>
-                    <p>Veterinaria</p>
+                    <p>RollingVet</p>
                 </Link>
                 </article>
                 <article className={styles.boxNosotros}>

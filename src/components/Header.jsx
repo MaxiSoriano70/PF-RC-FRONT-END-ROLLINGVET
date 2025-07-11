@@ -17,7 +17,7 @@ const Header = () => {
                         <div className={styles.logoPrincipal}>
                         <img src={logo} alt="logo" />
                         </div>
-                        Veterinaria
+                        RollingVet
                     </Link>
                 </div>
 

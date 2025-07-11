@@ -1,8 +1,8 @@
+import Error404 from "../components/Error404";
+
 const Error404Page = () => {
     return (
-        <div>
-            Error 404
-        </div>
+        <Error404/>
     );
 }
 

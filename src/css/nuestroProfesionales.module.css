@@ -1,0 +1,121 @@
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+}
+
+.nuestrosProfesionales{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nuestrosProfesionales .contenedorTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.contenedorTitulo .tituloProfe{
+    text-transform: uppercase;
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.nuestrosProfesionales .contenedorCardsVet{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contenedorCardsVet .cardVeterinario {
+    background-color: var(--colorBlanco);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.contenedorCardsVet .cardVeterinario:hover {
+    background-color: var(--color5);
+    transform: scale(1.05);
+}
+
+.contenedorCardsVet .cardVeterinario:hover .nombreVeterinario,
+.contenedorCardsVet .cardVeterinario:hover .matriculaVet {
+    color: var(--colorBlanco);
+    transition: color 0.3s ease;
+}
+
+.cardVeterinario .imagenVet{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    aspect-ratio: 16/9;
+}
+
+.cardVeterinario .nombreVeterinario{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cardVeterinario .matriculaVet{
+    margin: 5px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width:700px){
+    .contenedorTitulo .tituloProfe{
+        font-size: 1.2rem;
+    }
+
+    .contenedorCardsVet .cardVeterinario {
+        width: 250px;
+        height: 275px;
+    }
+
+    .cardVeterinario .imagenVet{
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -1,3 +1,4 @@
+import NuestrasMarcas from '../components/NuestrasMarcas';
 import NuestrosServicios from '../components/NuestrosServicios';
 import Slider from '../components/Slider'
 
@@ -6,6 +7,7 @@ const HomePage = () => {
         <>
             <Slider/>
             <NuestrosServicios/>
+            <NuestrasMarcas/>
         </>
     )
 }

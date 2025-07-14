@@ -1,6 +1,14 @@
+import styles from '../css/modalIniciarSesion.module.css';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function ModalIniciarSesion({ show, handleClose }) {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div
       className={`modal fade ${show ? "show d-block" : "d-none"}`}
@@ -41,15 +49,18 @@ function ModalIniciarSesion({ show, handleClose }) {
                 <label htmlFor="password-iniciar-sesion" className="form-label fw-bolder">
                   Contraseña
                 </label>
-                <input
-                  type="password"
-                  className="form-control bgInput"
-                  id="password-iniciar-sesion"
-                  placeholder="Ingrese su contraseña"
-                  minLength="6"
-                  maxLength="16"
-                  required
-                />
+                <div className="position-relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="form-control bgInput pe-5"
+                    id="password-iniciar-sesion"
+                    placeholder="Ingrese su contraseña"
+                    minLength="6"
+                    maxLength="16"
+                    required
+                  />
+                  <i className={`fa-solid ${showPassword ? "fa-eye" : "fa-eye-slash"} ${styles.buttonEye}`} onClick={togglePasswordVisibility}></i>
+                </div>
               </div>
 
               <div className="mb-2">

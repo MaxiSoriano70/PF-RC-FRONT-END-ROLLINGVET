@@ -1,0 +1,19 @@
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+}
+
+.buttonEye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}

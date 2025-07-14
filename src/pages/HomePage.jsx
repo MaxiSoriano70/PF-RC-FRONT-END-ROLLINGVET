@@ -1,6 +1,7 @@
 import NuestrasMarcas from '../components/NuestrasMarcas';
 import NuestrosProfesionales from '../components/NuestrosProfesionales';
 import NuestrosServicios from '../components/NuestrosServicios';
+import PubliPeluqeria from '../components/PubliPeluqueria';
 import Slider from '../components/Slider'
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
             <NuestrosServicios/>
             <NuestrasMarcas/>
             <NuestrosProfesionales/>
+            <PubliPeluqeria/>
         </>
     )
 }

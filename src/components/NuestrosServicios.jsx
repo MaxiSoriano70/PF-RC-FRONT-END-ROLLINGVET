@@ -1,4 +1,4 @@
-import styleNuestrosServicios from '../css/nuestrosServicios.module.css';
+import styles from '../css/nuestrosServicios.module.css';
 import consultorioVeterinario from '../assets/img/consultorio-veterinario.svg';
 import internacionDiurna from '../assets/img/internacion-diurna.svg';
 import laboratorioPropio from '../assets/img/laboratorio.svg';
@@ -10,7 +10,7 @@ import otrasEspecialidades from '../assets/img/otras-especialidades.svg';
 
 const Servicio = (props) => {
     return(
-        <div className={styleNuestrosServicios.cardServicio}>
+        <div className={styles.cardServicio}>
             <img src={props.imagen} alt={props.titulo}/>
             <h5>{props.titulo}</h5>
             <p>{props.descripcion}</p>
@@ -20,11 +20,11 @@ const Servicio = (props) => {
 
 const NuestrosServicios = () => {
     return (
-        <section className={styleNuestrosServicios.servicios}>
-            <article className={styleNuestrosServicios.serviciosTitulo}>
+        <section className={styles.servicios}>
+            <article className={styles.serviciosTitulo}>
                 <h2>Servicios</h2>
             </article>
-            <article className={styleNuestrosServicios.contenedorServicios}>
+            <article className={styles.contenedorServicios}>
                 <Servicio key={1} imagen={consultorioVeterinario} titulo="Consultorio Veterinario" descripcion="Espacio dedicado al cuidado de mascotas, ofreciendo consultas, diagnósticos y tratamientos veterinarios para su bienestar."/>
                 <Servicio key={2} imagen={internacionDiurna} titulo="Internación Diurna" descripcion="Servicio de cuidado veterinario durante el día, con monitoreo y atención médica especializada para mascotas."/>
                 <Servicio key={3} imagen={laboratorioPropio} titulo="Laboratorio Propio" descripcion="Laboratorio veterinario interno para realizar análisis y diagnósticos precisos en el mismo consultorio."/>

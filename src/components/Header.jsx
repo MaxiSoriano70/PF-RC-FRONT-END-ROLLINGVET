@@ -3,22 +3,23 @@ import logo from '../assets/img/Logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ModalIniciarSesion from './ModalIniciarSesion';
+import ModalRegistrarse from './ModalRegistrarse';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showModalLogin, setShowModalLogin] = useState(false);
+    const [showModalRegister, setShowModalRegister] = useState(false);
+
 
     const toggleMenu = () => {
         setMenuOpen(prev => !prev);
     };
 
-    const handleOpenLogin = () => {
-        setShowModalLogin(true);
-    };
+    const handleOpenLogin = () => setShowModalLogin(true);
+    const handleCloseLogin = () => setShowModalLogin(false);
+    const handleOpenRegister = () => setShowModalRegister(true);
+    const handleCloseRegister = () => setShowModalRegister(false);
 
-    const handleCloseLogin = () => {
-        setShowModalLogin(false);
-    };
 
     return (
         <>
@@ -46,7 +47,7 @@ const Header = () => {
                         <li><Link to="/nosotros" className={styles.link}><i className="fa-solid fa-circle-info"></i> Nosotros</Link></li>
                         <li><Link to="/Contacto" className={styles.link}><i className="fa-solid fa-phone"></i> Contacto</Link></li>
                         <button className={styles.iniciarSesion} onClick={handleOpenLogin}>Iniciar Sesión</button>
-                        <button className={styles.iniciarSesion}>Registrarse</button>
+                        <button className={styles.iniciarSesion} onClick={handleOpenRegister}>Registrarse</button>
                     </ul>
 
                     <div className={styles.toggleBtn}>
@@ -57,6 +58,8 @@ const Header = () => {
                 </nav>
             </header>
             <ModalIniciarSesion show={showModalLogin} handleClose={handleCloseLogin} />
+            <ModalRegistrarse show={showModalRegister} handleClose={handleCloseRegister} />
+
         </>
     );
 }

@@ -1,4 +1,4 @@
-import styleNuestrasMarcas from '../css/nuestrasMarcas.module.css';
+import styles from '../css/nuestrasMarcas.module.css';
 import marca1 from '../assets/img/marca-1.png';
 import marca2 from '../assets/img/marca-2.png';
 import marca3 from '../assets/img/marca-3.png';
@@ -8,19 +8,19 @@ import marca6 from '../assets/img/marca-6.png';
 
 const Marca = (props) => {
     return(
-        <div className={styleNuestrasMarcas.contenedorLogo}>
-            <img className={styleNuestrasMarcas[props.estilo]} src={props.imagen} alt={props.alt}/>
+        <div className={styles.contenedorLogo}>
+            <img className={styles[props.estilo]} src={props.imagen} alt={props.alt}/>
         </div>
     );
 }
 
 const NuestrasMarcas = () => {
     return (
-        <section className={styleNuestrasMarcas.nuestrasMarcas}>
-            <article className={styleNuestrasMarcas.marcaTitulo}>
+        <section className={styles.nuestrasMarcas}>
+            <article className={styles.marcaTitulo}>
                 <h3>Nuestras marcas</h3>
             </article>
-            <article className={styleNuestrasMarcas.marcas}>
+            <article className={styles.marcas}>
                 <Marca key={1} imagen={marca1} alt="royal-canin" estilo="logoRoyalCanin"/>
                 <Marca key={2} imagen={marca2} alt="purina" estilo="logoPurina"/>
                 <Marca key={3} imagen={marca3} alt="nexgard" estilo="logoNexgard"/>

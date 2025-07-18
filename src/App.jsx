@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import NosotrosPage from './pages/NosotrosPage';
 import ContactoPage from './pages/ContactoPage';
 import Error404Page from './pages/Error404Page';
+import AdministracionPage from './pages/AdministracionPage';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path='/' element={<HomePage/>}/>
                 <Route path='/nosotros' element={<NosotrosPage/>}/>
                 <Route path='/contacto' element={<ContactoPage/>}/>
+                <Route path='/administracion' element={<AdministracionPage/>}/>
                 <Route path='*' element={<Error404Page/>}/>
             </Routes>
       <FooterVet/>
@@ -23,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

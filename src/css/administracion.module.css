@@ -1,0 +1,143 @@
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+}
+
+.secAdministracion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px ;
+}
+
+.admTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.opciones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: var(--colorBlanco);
+    padding: 12px 15px;
+    width: 275px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 35px;
+    color: var(--colorBlanco);
+}
+
+.descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.headerDes{
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.tituloDes {
+    margin: 0;
+}
+
+.bodyDes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subTitulo{
+    font-weight: bold;
+}
+
+.footerDes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttonAdmin {
+    background-color: var(--color3);
+    color: var(--colorBlanco);
+    border: none;
+    border-radius: 8px;
+    padding: 7.5px ;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonAdmin:hover {
+    background-color: var(--color4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.buttonAdmin:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .opciones {
+        flex-direction: column;
+    }
+
+    .opcion {
+        width: 100%;
+        max-width: 350px;
+    }
+}

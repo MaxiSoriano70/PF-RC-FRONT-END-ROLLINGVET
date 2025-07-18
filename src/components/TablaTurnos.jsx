@@ -19,7 +19,7 @@ const options = {
     responsive: "standard", // o "vertical", "simple", "stacked"
 };
 
-const TableTurnos = () => {
+const TablaTurnos = () => {
     return (
         <div style={{ maxWidth: "100%", overflowX: "auto" }}>
         <MUIDataTable
@@ -32,4 +32,4 @@ const TableTurnos = () => {
     );
 };
 
-export default TableTurnos;
+export default TablaTurnos;

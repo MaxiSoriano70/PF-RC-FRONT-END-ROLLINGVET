@@ -1,3 +1,4 @@
+import styles from '../css/tablaTurnos.module.css';
 import MUIDataTable from "mui-datatables";
 
 const columns = [
@@ -21,14 +22,16 @@ const options = {
 
 const TablaTurnos = () => {
     return (
-        <div style={{ maxWidth: "100%", overflowX: "auto" }}>
-        <MUIDataTable
-            title={"Employee List"}
-            data={data}
-            columns={columns}
-            options={options}
-        />
-        </div>
+        <section className={styles.sectionTablaTurnos}>
+            <div className={styles.tablaTurnos}>
+                <MUIDataTable
+                    title={"Turnos"}
+                    data={data}
+                    columns={columns}
+                    options={options}
+                />
+            </div>
+        </section>
     );
 };
 

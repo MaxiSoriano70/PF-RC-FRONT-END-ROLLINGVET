@@ -1,4 +1,8 @@
-import styles from '../css/administracion.module.css';
+import styles from '../css/panelAdministracion.module.css';
+import TablaTurnos from './TablaTurnos';
+import TablaDuenos from './TablaDuenos';
+import TablaMascotas from './TablaMascotas';
+import TablaVeterinarios from './TablaVeterinarios';
 
 const PanelAdministracion = () => {
     return (
@@ -82,6 +86,11 @@ const PanelAdministracion = () => {
                 </div>
 
             </article>
+
+            <TablaTurnos/>
+            <TablaDuenos/>
+            <TablaMascotas/>
+            <TablaVeterinarios/>
         </section>
     );
 };

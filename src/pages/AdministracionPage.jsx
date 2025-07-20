@@ -1,5 +1,6 @@
 import PanelAdministracion from "../components/PanelAdministracion";
 import TablaDuenos from "../components/TablaDuenos";
+import TablaMascotas from "../components/TablaMascotas";
 import TablaTurnos from "../components/TablaTurnos";
 
 const AdministracionPage = () => {
@@ -8,6 +9,7 @@ const AdministracionPage = () => {
             <PanelAdministracion/>
             <TablaTurnos/>
             <TablaDuenos/>
+            <TablaMascotas/>
         </>
     );
 }

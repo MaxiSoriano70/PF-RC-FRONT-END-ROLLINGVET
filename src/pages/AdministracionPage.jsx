@@ -1,11 +1,13 @@
 import PanelAdministracion from "../components/PanelAdministracion";
-import TableTurnos from "../components/TablaTurnos";
+import TablaDuenos from "../components/TablaDuenos";
+import TablaTurnos from "../components/TablaTurnos";
 
 const AdministracionPage = () => {
     return (
         <>
             <PanelAdministracion/>
-            <TableTurnos/>
+            <TablaTurnos/>
+            <TablaDuenos/>
         </>
     );
 }

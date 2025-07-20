@@ -69,7 +69,7 @@ const PanelAdministracion = () => {
                     </div>
                     <div className={styles.descripcion}>
                         <div className={styles.headerDes}>
-                            <h3 className={styles.tituloDes}>Veterinario</h3>
+                            <h3 className={styles.tituloDes}>Veterinarios</h3>
                         </div>
                         <div className={styles.bodyDes}>
                             <span className={styles.subTitulo}>Veterinarios:</span>

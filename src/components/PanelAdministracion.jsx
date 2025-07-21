@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from '../css/panelAdministracion.module.css';
 import TablaTurnos from './TablaTurnos';
 import TablaDuenos from './TablaDuenos';
@@ -5,6 +6,12 @@ import TablaMascotas from './TablaMascotas';
 import TablaVeterinarios from './TablaVeterinarios';
 
 const PanelAdministracion = () => {
+    const [tablaVisible, setTablaVisible] = useState(null);
+
+    const mostrarTabla = (tabla) => {
+        setTablaVisible(tabla);
+    };
+
     return (
         <section className={styles.secAdministracion}>
             <article className={styles.admTitulo}>
@@ -12,7 +19,6 @@ const PanelAdministracion = () => {
             </article>
 
             <article className={styles.opciones}>
-
                 <div className={styles.opcion}>
                     <div className={styles.logo}>
                         <i className="fa-solid fa-calendar-day"></i>
@@ -26,7 +32,12 @@ const PanelAdministracion = () => {
                             <span>35 turnos.</span>
                         </div>
                         <div className={styles.footerDes}>
-                            <button className={styles.buttonAdmin}>Adm. Turnos</button>
+                            <button
+                                className={styles.buttonAdmin}
+                                onClick={() => mostrarTabla('turnos')}
+                            >
+                                Adm. Turnos
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -44,7 +55,12 @@ const PanelAdministracion = () => {
                             <span>30 total.</span>
                         </div>
                         <div className={styles.footerDes}>
-                            <button className={styles.buttonAdmin}>Adm. Dueños</button>
+                            <button
+                                className={styles.buttonAdmin}
+                                onClick={() => mostrarTabla('duenos')}
+                            >
+                                Adm. Dueños
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +78,12 @@ const PanelAdministracion = () => {
                             <span>42 total.</span>
                         </div>
                         <div className={styles.footerDes}>
-                            <button className={styles.buttonAdmin}>Adm. Mascotas</button>
+                            <button
+                                className={styles.buttonAdmin}
+                                onClick={() => mostrarTabla('mascotas')}
+                            >
+                                Adm. Mascotas
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -80,17 +101,26 @@ const PanelAdministracion = () => {
                             <span>4 total.</span>
                         </div>
                         <div className={styles.footerDes}>
-                            <button className={styles.buttonAdmin}>Adm. Veterinarios</button>
+                            <button
+                                className={styles.buttonAdmin}
+                                onClick={() => mostrarTabla('veterinarios')}
+                            >
+                                Adm. Veterinarios
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </article>
 
-            <TablaTurnos/>
-            <TablaDuenos/>
-            <TablaMascotas/>
-            <TablaVeterinarios/>
+            {tablaVisible === null && (
+                <div className={styles.mensajeAdmin}>
+                    <h3>Seleccione una opción de administración</h3>
+                </div>
+            )}
+            {tablaVisible === 'turnos' && <TablaTurnos />}
+            {tablaVisible === 'duenos' && <TablaDuenos />}
+            {tablaVisible === 'mascotas' && <TablaMascotas />}
+            {tablaVisible === 'veterinarios' && <TablaVeterinarios />}
         </section>
     );
 };

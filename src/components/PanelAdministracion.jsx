@@ -4,6 +4,7 @@ import TablaTurnos from './TablaTurnos';
 import TablaDuenos from './TablaDuenos';
 import TablaMascotas from './TablaMascotas';
 import TablaVeterinarios from './TablaVeterinarios';
+import BienvenidaAdm from './BienvenidaAdm';
 
 const PanelAdministracion = () => {
     const [tablaVisible, setTablaVisible] = useState(null);
@@ -113,9 +114,7 @@ const PanelAdministracion = () => {
             </article>
 
             {tablaVisible === null && (
-                <div className={styles.mensajeAdmin}>
-                    <h3>Seleccione una opción de administración</h3>
-                </div>
+                <BienvenidaAdm/>
             )}
             {tablaVisible === 'turnos' && <TablaTurnos />}
             {tablaVisible === 'duenos' && <TablaDuenos />}

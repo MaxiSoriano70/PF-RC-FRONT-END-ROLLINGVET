@@ -1,0 +1,83 @@
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+}
+
+.bienvenidaAdm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 10px;
+}
+
+.contenedorAdm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    background-color: var(--colorBlanco);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: aparecer 0.4s ease forwards;
+}
+
+.tituloBienvenida{
+    margin: 0;
+}
+
+.usuarioAdm{
+    font-weight: bold;
+}
+
+.selectBienvenida{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 510px){
+    .bienvenidaAdm{
+        margin: 20px 0px;
+    }
+
+    .contenedorAdm{
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .tituloBienvenida{
+        font-size: 16px;
+    }
+
+    .usuarioAdm{
+        font-size: 16px;
+    }
+
+    .selectBienvenida{
+        font-size: 14px;
+    }
+}

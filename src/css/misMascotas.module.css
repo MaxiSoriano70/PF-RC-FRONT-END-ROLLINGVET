@@ -1,26 +1,21 @@
-:root {
-    --color-1: #223d58;
-    --color-2: #3e6389;
-    --color-3: #6e94b9;
-    --color-4: #b1d1f1;
-    --color-5: #1c7373;
-    --color-6: #005757;
-    --color-7: #b45908;
-    --color-8: #ab5408;
-    --color-fondo: #eaeef4;
-    --color-complementario-I : #ce1d49;
-    --color-complementario-II : #b81941;
-    --color-success: #28a745;
-    --color-warning: #ffc107;
-    --color-danger: #dc3545;
-    --color-blanco: #fff;
-    --color-negro: #000;
+:root{
+    --color1: #27304d;
+    --color2: #354573;
+    --color3: #c51142;
+    --color4: #e2205a;
+    --color5: #025951;
+    --color6: #007469;
+    --colorBlanco: #fff;
+    --fondo: #f2f6fc;
+    --colorSuccess: #28a745;
+    --colorWarning: #ffc107;
+    --colorDanger: #dc3545;
 }
 
 .tusMascotas{
     width: 100%;
     padding: 10px 20px;
-    margin: 20px 0px;
+    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +49,7 @@
 }
 
 .contenedorMascotas .card{
-    background-color: var(--color-blanco);
+    background-color: var(--colorBlanco);
     position: relative;
     width: 300px;
     height: 350px;
@@ -70,7 +65,7 @@
 .contenedorMascotas .card .btnEliminarMascota{
     all: unset;
     position: absolute;
-    color: var(--color-blanco);
+    color: var(--colorBlanco);
     top: 5px;
     right: 10px;
     font-size: 1.5rem;
@@ -79,7 +74,7 @@
 }
 
 .contenedorMascotas .card .btnEliminarMascota:hover{
-    color: var(--color-fondo);
+    color: var(--fondo);
     transition: 0.2s linear;
 }
 
@@ -114,7 +109,7 @@
     position: absolute;
     width: 400px;
     height: 200px;
-    background: linear-gradient(to right, var(--color-1), var(--color-2));
+    background: linear-gradient(to right, var(--color1), var(--color2));
     transform: rotate(-25deg);
     top: -50px;
     left: -100px;
@@ -124,7 +119,7 @@
     position: absolute;
     width: 400px;
     height: 200px;
-    background: linear-gradient(to right, var(--color-complementario-I), var(--color-complementario-II));
+    background: linear-gradient(to right, var(--color3), var(--color4));
     transform: rotate(-25deg);
     top: -50px;
     left: -100px;
@@ -139,14 +134,14 @@
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--color-success);
+    color: var(--colorSuccess);
 }
 
 .contenedorMascotas .card .contenido h5.sinTurnos{
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--color-danger);
+    color: var(--colorDanger);
 }
 
 .contenedorMascotas .card .contenido .botonesMascotas{
@@ -159,11 +154,11 @@
 .contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota{
     text-transform: capitalize;
     font-size: 1rem;
-    background-color: var(--color-7);
-    color: var(--color-blanco);
+    background-color: var(--color5);
+    color: var(--colorBlanco);
     border: none;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
     text-decoration: none;
@@ -171,7 +166,7 @@
 }
 
 .contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota:hover{
-    background-color: var(--color-8);
+    background-color: var(--color6);
     transition: 0.2s linear;
 }
 

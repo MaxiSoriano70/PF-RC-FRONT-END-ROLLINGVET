@@ -1,0 +1,298 @@
+:root {
+    --color-1: #223d58;
+    --color-2: #3e6389;
+    --color-3: #6e94b9;
+    --color-4: #b1d1f1;
+    --color-5: #1c7373;
+    --color-6: #005757;
+    --color-7: #b45908;
+    --color-8: #ab5408;
+    --color-fondo: #eaeef4;
+    --color-complementario-I : #ce1d49;
+    --color-complementario-II : #b81941;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+}
+
+.tusMascotas{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tusMascotas .tusMascotasTitulo{
+    margin-bottom: 10px;
+}
+
+.tusMascotas .tusMascotasTitulo .tmTitulo{
+    text-transform: uppercase;
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.tusMascotas .agregarMascota{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tusMascotas .contenedorMascotas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedorMascotas .card{
+    background-color: var(--color-blanco);
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    margin: 10px 10px;
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.contenedorMascotas .card .btnEliminarMascota{
+    all: unset;
+    position: absolute;
+    color: var(--color-blanco);
+    top: 5px;
+    right: 10px;
+    font-size: 1.5rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.contenedorMascotas .card .btnEliminarMascota:hover{
+    color: var(--color-fondo);
+    transition: 0.2s linear;
+}
+
+.contenedorMascotas .card .contenido{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedorMascotas .card .contenido .imgPet{
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.contenedorMascotas .card .contenido .imgPet .imgMascota{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    aspect-ratio: 16/9;
+}
+
+.contenedorMascotas .card .contenido span.perro{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(to right, var(--color-1), var(--color-2));
+    transform: rotate(-25deg);
+    top: -50px;
+    left: -100px;
+}
+
+.contenedorMascotas .card .contenido span.gato{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(to right, var(--color-complementario-I), var(--color-complementario-II));
+    transform: rotate(-25deg);
+    top: -50px;
+    left: -100px;
+}
+
+.contenedorMascotas .card .contenido .nombreMascota{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.contenedorMascotas .card .contenido h5.conTurno{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-success);
+}
+
+.contenedorMascotas .card .contenido h5.sinTurnos{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-danger);
+}
+
+.contenedorMascotas .card .contenido .botonesMascotas{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota{
+    text-transform: capitalize;
+    font-size: 1rem;
+    background-color: var(--color-7);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota:hover{
+    background-color: var(--color-8);
+    transition: 0.2s linear;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width:700px){
+    .tusMascotas{
+        padding: 10px;
+    }
+
+    .contenedorMascotas .card{
+        width: 250px;
+        height: auto;
+    }
+
+    .contenedorMascotas .card .contenido{
+        padding: 10px;
+    }
+
+    .contenedorMascotas .card .contenido .imgPet{
+        height: 40%;
+        margin-bottom: 10px;
+    }
+
+    .contenedorMascotas .card .contenido .imgPet .imgMascota{
+        width: 100px;
+        height: 100px;
+    }
+
+    .contenedorMascotas .card .contenido span.perro{
+        width: 350px;
+        height: 200px;
+        top: -85px;
+    }
+
+    .contenedorMascotas .card .contenido span.gato{
+        width: 350px;
+        height: 200px;
+        top: -85px;
+    }
+
+    .contenedorMascotas .card .contenido h5.conTurno{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .contenedorMascotas .card .contenido h5.sinTurnos{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .contenedorMascotas .card .contenido .botonesMascotas{
+        flex-direction: column;
+        padding: 5px 0px;
+    }
+
+    .contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota{
+        font-size: 0.8rem;
+        margin: 5px 0px;
+    }
+}
+
+@media (max-width:560px){
+    .contenedorMascotas .card{
+        width: 200px;
+    }
+
+    .contenedorMascotas .card .contenido span.perro{
+        width: 300px;
+        height: 200px;
+        top: -100px;
+    }
+
+    .contenedorMascotas .card .contenido span.gato{
+        width: 300px;
+        height: 200px;
+        top: -100px;
+    }
+}
+
+@media (max-width:460px){
+    .contenedorMascotas .card{
+        width: 80%;
+    }
+
+    .contenedorMascotas .card .contenido .nombreMascota{
+        margin: 15px 0px 10px 0px;
+    }
+
+    .contenedorMascotas .card .contenido span.perro{
+        width: 100%;
+        height: 210px;
+        top: -90px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    .contenedorMascotas .card .contenido span.gato{
+        width: 100%;
+        height: 210px;
+        top: -90px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    .contenedorMascotas .card .contenido .botonesMascotas{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedorMascotas .card .contenido .botonesMascotas .btnEditarMascota{
+        margin: 5px;
+    }
+}

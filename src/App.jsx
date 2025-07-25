@@ -7,6 +7,7 @@ import NosotrosPage from './pages/NosotrosPage';
 import ContactoPage from './pages/ContactoPage';
 import Error404Page from './pages/Error404Page';
 import AdministracionPage from './pages/AdministracionPage';
+import MisMascotasPage from './pages/MisMascotasPage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path='/nosotros' element={<NosotrosPage/>}/>
                 <Route path='/contacto' element={<ContactoPage/>}/>
                 <Route path='/administracion' element={<AdministracionPage/>}/>
+                <Route path='/misMascotas' element={<MisMascotasPage/>}/>
                 <Route path='*' element={<Error404Page/>}/>
             </Routes>
       <FooterVet/>

@@ -7,6 +7,9 @@
     --color6: #007469;
     --colorBlanco: #fff;
     --fondo: #f2f6fc;
+    --colorSuccess: #28a745;
+    --colorWarning: #ffc107;
+    --colorDanger: #dc3545;
 }
 
 .section1 {

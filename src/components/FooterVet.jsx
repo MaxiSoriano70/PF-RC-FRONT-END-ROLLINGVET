@@ -6,12 +6,17 @@ const Footer = () => {
         <footer>
             <section className={styles.section1}>
                 <article className={styles.boxLogo}>
-                <Link href="index.html" aria-label="Logo y nombre">
-                    <div>
-                    <img src="img/Logo.png" alt="Logo-pie-de-pagina" />
+                    <Link href="index.html" aria-label="Logo y nombre">
+                        <div>
+                        <img src="img/Logo.png" alt="Logo-pie-de-pagina" />
+                        </div>
+                        <p>RollingVet</p>
+                    </Link>
+                    <div className='listFooter'>
+                        <p className='itemListFooter'><i class="fa-solid fa-location-dot"></i> Calle falsa 123</p>
+                        <p className='itemListFooter'><i class="fa-regular fa-envelope"></i> rollingvet@gmail.com</p>
+                        <p className='itemListFooter'><i class="fa-solid fa-phone"></i> 387 5123321</p>
                     </div>
-                    <p>RollingVet</p>
-                </Link>
                 </article>
                 <article className={styles.boxNosotros}>
                     <h3>Sobre nosotros</h3>

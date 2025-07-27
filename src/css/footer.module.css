@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .boxLogo a {
@@ -54,6 +55,22 @@
     color: var(--colorBlanco);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.listFooter {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.itemListFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre ícono y texto */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
 }
 
 .boxNosotros {

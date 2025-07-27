@@ -2,8 +2,11 @@ import styles from '../css/slider.module.css';
 import banner1 from '../assets/img/banner-1.jpeg';
 import banner2 from '../assets/img/banner-2.jpeg';
 import banner3 from '../assets/img/banner-3.jpeg';
+import { useState } from 'react';
 
 const Slider = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+
     return (
         <article id="carouselVeterinaria" className="carousel slide carousel-fade" data-bs-ride="carousel">
         <div className="carousel-indicators">
@@ -35,18 +38,26 @@ const Slider = () => {
             <img src={banner1} className={`d-block w-100 ${styles.veterinariaCarousel}`} alt="banner-1" />
             <div className={`d-flex align-items-center justify-content-center flex-column ${styles.textCarrusel}`}>
                 <h2 className={styles.tituloCarrusel}>
-                Bienvenido a la Veterinaria, Nos apasiona cuidar y proteger a tus mascotas como si fueran parte de
+                Bienvenido a la RollingVet, nos apasiona cuidar y proteger a tus mascotas como si fueran parte de
                 nuestra familia. Ofrecemos servicios completos de salud y bienestar, brindando atención personalizada
                 para cada peludo amigo.
                 </h2>
-                <button
-                id="boton-registrarse"
-                className={`btn ${styles.btnCarrusel1}`}
-                data-bs-toggle="modal"
-                data-bs-target="#registrarseModal"
-                >
-                Registrate
-                </button>
+                {!isAuthenticated ? (
+                    <button
+                    id="boton-registrarse"
+                    className={`btn ${styles.btnCarrusel3}`}
+                    data-bs-toggle="modal"
+                    data-bs-target="#registrarseModal"
+                    >
+                        Registrate
+                    </button>
+                ) : (
+                    <button
+                    className={`btn ${styles.btnCarrusel3}`}
+                    >
+                        <i className="fa-solid fa-paw"></i> Mis mascotas
+                    </button>
+                )}
             </div>
             </div>
 
@@ -70,10 +81,7 @@ const Slider = () => {
             <img src={banner3} className={`d-block w-100 ${styles.veterinariaCarousel}`} alt="banner-3" />
             <div className={`d-flex align-items-center justify-content-center flex-column ${styles.textCarrusel}`}>
                 <h2 className={styles.tituloCarrusel}>
-                Nuestra clínica está ubicada en Calle falsa 123, fácilmente accesible y cercana a estacionamientos y
-                transporte público. Puedes comunicarte con nosotros por teléfono o escribirnos a nuestro correo. También
-                respondemos consultas a través de WhatsApp en el mismo número. ¡Estamos siempre listos para ayudarte y
-                cuidar de tu mascota!
+                Nuestra clínica está en Calle Falsa 123, con fácil acceso y cerca de transporte y estacionamiento. Podés contactarnos por teléfono, correo o WhatsApp. ¡Siempre listos para cuidar a tu mascota!
                 </h2>
                 <a href="#" className={`btn ${styles.btnCarrusel3}`}>
                 <i className="fa-solid fa-address-book"></i> Contacto

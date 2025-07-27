@@ -59,18 +59,25 @@
 
 .listFooter {
     width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .itemListFooter {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espacio entre ícono y texto */
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #333;
+    justify-content: start;
+    gap: 0.5rem;
+    font-size: 16px;
+    color: var(--colorBlanco);
     text-align: left;
+    margin: 0;
+    font-weight: bold;
 }
 
 .boxNosotros {

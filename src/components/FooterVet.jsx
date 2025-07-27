@@ -12,10 +12,10 @@ const Footer = () => {
                         </div>
                         <p>RollingVet</p>
                     </Link>
-                    <div className='listFooter'>
-                        <p className='itemListFooter'><i class="fa-solid fa-location-dot"></i> Calle falsa 123</p>
-                        <p className='itemListFooter'><i class="fa-regular fa-envelope"></i> rollingvet@gmail.com</p>
-                        <p className='itemListFooter'><i class="fa-solid fa-phone"></i> 387 5123321</p>
+                    <div className={styles.listFooter}>
+                        <p className={styles.itemListFooter}><i className="fa-solid fa-location-dot"></i> Calle falsa 123</p>
+                        <p className={styles.itemListFooter}><i className="fa-regular fa-envelope"></i> rollingvet@gmail.com</p>
+                        <p className={styles.itemListFooter}><i className="fa-solid fa-phone"></i> 387 5123321</p>
                     </div>
                 </article>
                 <article className={styles.boxNosotros}>

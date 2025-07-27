@@ -16,7 +16,7 @@ const Footer = () => {
                 <article className={styles.boxNosotros}>
                     <h3>Sobre nosotros</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit, et corrupti dolore, voluptate labore illo quaerat voluptatum obcaecati ipsum cum quasi eveniet. Accusantium est quo pariatur optio dolor minus.
+                        En RollingVet nos dedicamos al cuidado integral de tus mascotas. Contamos con un equipo profesional y comprometido que brinda atención médica personalizada, siempre con calidez y responsabilidad. Nuestro objetivo es garantizar el bienestar de cada animal que llega a nuestra clínica.
                     </p>
                 </article>
                 <article className={styles.boxRedes}>

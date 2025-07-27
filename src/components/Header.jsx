@@ -9,7 +9,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showModalLogin, setShowModalLogin] = useState(false);
     const [showModalRegister, setShowModalRegister] = useState(false);
-
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
 
     const toggleMenu = () => {
         setMenuOpen(prev => !prev);
@@ -44,10 +44,19 @@ const Header = () => {
 
                     <ul className={`${styles.navLink} ${menuOpen ? styles.showMenu : ''}`}>
                         <li><Link to="/" className={styles.link}><i className="fa-solid fa-house"></i> Home</Link></li>
-                        <li><Link to="/nosotros" className={styles.link}><i className="fa-solid fa-circle-info"></i> Nosotros</Link></li>
                         <li><Link to="/Contacto" className={styles.link}><i className="fa-solid fa-phone"></i> Contacto</Link></li>
-                        <button className={styles.iniciarSesion} onClick={handleOpenLogin}>Iniciar Sesión</button>
-                        <button className={styles.iniciarSesion} onClick={handleOpenRegister}>Registrarse</button>
+                        <li><Link to="/nosotros" className={styles.link}><i className="fa-solid fa-circle-info"></i> Nosotros</Link></li>
+                        {!isAuthenticated ? (
+                            <>
+                                <button className={styles.iniciarSesion} onClick={handleOpenLogin}>Iniciar Sesión</button>
+                                <button className={styles.iniciarSesion} onClick={handleOpenRegister}>Registrarse</button>
+                            </>
+                        ) : (
+                            <>
+                                <button className={styles.iniciarSesion}><i className="fa-solid fa-user"></i> Mi Perfil</button>
+                                <button className={styles.iniciarSesion} onClick={() => setIsAuthenticated(false)}><i className="fa-solid fa-door-open"></i> Cerrar Sesión</button>
+                            </>
+                        )}
                     </ul>
 
                     <div className={styles.toggleBtn}>
@@ -59,7 +68,6 @@ const Header = () => {
             </header>
             <ModalIniciarSesion show={showModalLogin} handleClose={handleCloseLogin} />
             <ModalRegistrarse show={showModalRegister} handleClose={handleCloseRegister} />
-
         </>
     );
 }

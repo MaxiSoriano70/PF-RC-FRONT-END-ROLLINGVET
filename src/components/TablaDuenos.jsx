@@ -22,15 +22,18 @@ const options = {
 
 const TablaDuenos = () => {
     return (
-        <section className={styles.sectionTablaDuenos}>
-            <div className={styles.tablaDuenos}>
-                <MUIDataTable
-                    title={"Dueños"}
-                    data={data}
-                    columns={columns}
-                    options={options}
-                />
-            </div>
+        <section className={styles.sectionTabla}>
+            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar dueños</button>
+            <article className={styles.sectionTablaDuenos}>
+                <div className={styles.tablaDuenos}>
+                    <MUIDataTable
+                        title={"Dueños"}
+                        data={data}
+                        columns={columns}
+                        options={options}
+                    />
+                </div>
+            </article>
         </section>
     )
 }

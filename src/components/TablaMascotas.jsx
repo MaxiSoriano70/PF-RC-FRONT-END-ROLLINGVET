@@ -23,7 +23,7 @@ const options = {
 const TablaMascotas = () => {
     return (
         <section className={styles.sectionTabla}>
-            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar mascotas</button>
+            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar mascota</button>
             <article className={styles.sectionTablaMascotas}>
                 <div className={styles.tablaMascotas}>
                     <MUIDataTable

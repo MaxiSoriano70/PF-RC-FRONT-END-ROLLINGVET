@@ -22,15 +22,18 @@ const options = {
 
 const TablaVeterinarios = () => {
     return (
-        <section className={styles.sectionTablaVeterinarios}>
-            <div className={styles.tablaVeterinarios}>
-                <MUIDataTable
-                    title={"Veterinarios"}
-                    data={data}
-                    columns={columns}
-                    options={options}
-                />
-            </div>
+        <section className={styles.sectionTabla}>
+            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar Veterinario</button>
+            <article className={styles.sectionTablaVeterinarios}>
+                <div className={styles.tablaVeterinarios}>
+                    <MUIDataTable
+                        title={"Veterinarios"}
+                        data={data}
+                        columns={columns}
+                        options={options}
+                    />
+                </div>
+            </article>
         </section>
     )
 }

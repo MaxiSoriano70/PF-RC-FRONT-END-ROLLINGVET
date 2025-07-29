@@ -23,7 +23,7 @@ const options = {
 const TablaDuenos = () => {
     return (
         <section className={styles.sectionTabla}>
-            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar dueños</button>
+            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar dueño</button>
             <article className={styles.sectionTablaDuenos}>
                 <div className={styles.tablaDuenos}>
                     <MUIDataTable

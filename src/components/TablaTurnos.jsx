@@ -22,15 +22,18 @@ const options = {
 
 const TablaTurnos = () => {
     return (
-        <section className={styles.sectionTablaTurnos}>
-            <div className={styles.tablaTurnos}>
-                <MUIDataTable
-                    title={"Turnos"}
-                    data={data}
-                    columns={columns}
-                    options={options}
-                />
-            </div>
+        <section className={styles.sectionTabla}>
+            <button type="button" className="btn btn-success fw-bold"><i className="fa-solid fa-plus"></i> Agregar Turno</button>
+            <article className={styles.sectionTablaTurnos}>
+                <div className={styles.tablaTurnos}>
+                    <MUIDataTable
+                        title={"Turnos"}
+                        data={data}
+                        columns={columns}
+                        options={options}
+                    />
+                </div>
+            </article>
         </section>
     );
 };

@@ -110,12 +110,20 @@ body{
 }*/
 
 .bgInput {
-  border: 1.8px solid var(--color1) !important;
+  border: 1.8px solid var(--color1);
 }
 
 .bgInput:focus {
-  border: 2px solid var(--color1) !important;
-  box-shadow: 0 0 0 0.2rem var(--color1) !important;
+  border: 2px solid var(--color1);
+  box-shadow: 0 0 0 0.2rem var(--color1);
+}
+
+input.is-valid {
+  border: 2px solid #28a745;
+}
+
+input.is-invalid {
+  border: 2px solid #dc3545;
 }
 
 .modoLight{

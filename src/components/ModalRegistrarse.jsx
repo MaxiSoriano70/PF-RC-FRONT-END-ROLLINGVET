@@ -4,6 +4,7 @@ import styles from "../css/modalRegistrarse.module.css";
 function ModalRegistrarse({ show, handleClose }) {
   const [showPassword, setShowPassword] = useState(false);
   const [showRepeatPassword, setShowRepeatPassword] = useState(false);
+  };
 
   return (
     <div
@@ -57,15 +58,16 @@ function ModalRegistrarse({ show, handleClose }) {
                 </div>
               </div>
 
-              <div className="mb-3">
-                <label htmlFor="emailRegistro" className="form-label fw-bold">
-                  Email
+              <div className="mb-3 w-100">
+                <label htmlFor="domicilioRegistro" className="form-label fw-bold">
+                  Domicilio
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   className="form-control bgInput"
-                  id="emailRegistro"
-                  placeholder="Ingrese su email"
+                  id="domicilioRegistro"
+                  placeholder="Ingrese su domicilio"
+                  maxLength="25"
                   required
                 />
               </div>
@@ -80,6 +82,19 @@ function ModalRegistrarse({ show, handleClose }) {
                   id="telefonoRegistro"
                   placeholder="Ingrese su teléfono"
                   maxLength="10"
+                  required
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="emailRegistro" className="form-label fw-bold">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control bgInput"
+                  id="emailRegistro"
+                  placeholder="Ingrese su email"
                   required
                 />
               </div>

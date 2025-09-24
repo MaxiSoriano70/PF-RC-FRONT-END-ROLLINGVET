@@ -92,23 +92,6 @@ body{
   cursor: not-allowed !important;
 }
 
-/*.btnPersonalized4 {
-  background-color: var(--color-1) !important;
-  color: var(--color-blanco) !important;
-  border: var(--color-1) !important;
-}
-
-.btnPersonalized4:hover {
-  background-color: var(--color-2) !important;
-  color: var(--color-blanco) !important;
-}
-
-.btnPersonalized4:disabled {
-  background-color: #d3d3d3 !important;
-  color: #a9a9a9 !important;
-  cursor: not-allowed !important;
-}*/
-
 .bgInput {
   border: 1.8px solid var(--color1);
 }
@@ -122,9 +105,40 @@ input.is-valid {
   border: 2px solid #28a745;
 }
 
+input.is-valid:focus {
+  border: 2px solid #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
 input.is-invalid {
   border: 2px solid #dc3545;
 }
+
+input.is-invalid:focus {
+  border: 2px solid #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+input.is-valid-password {
+  border: 2px solid #28a745;
+  background-image: none !important;
+}
+
+input.is-valid-password:focus {
+  border: 2px solid #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input.is-invalid-password {
+  border: 2px solid #dc3545;
+  background-image: none !important;
+}
+
+input.is-invalid-password:focus {
+  border: 2px solid #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
 
 .modoLight{
   background-color: var(--colorFondo);

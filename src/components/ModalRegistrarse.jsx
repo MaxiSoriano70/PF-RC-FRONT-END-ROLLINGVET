@@ -40,15 +40,16 @@ function ModalRegistrarse({ show, handleClose }) {
     if (field === "passwordRepeat") {
       setValidity({
         ...validity,
-        passwordRepeat: value === formValues.password,
+        passwordRepeat: value === "" ? null : value === formValues.password,
       });
     } else {
       setValidity({
         ...validity,
-        [field]: regex[field].test(value),
+        [field]: value === "" ? null : regex[field].test(value),
       });
     }
   };
+
 
   return (
     <div
@@ -83,8 +84,8 @@ function ModalRegistrarse({ show, handleClose }) {
                     type="text"
                     id="nombreRegistro"
                     placeholder="Ingrese su nombre"
-                    className={`form-control bgInput ${validity.nombre === null
-                        ? ""
+                    className={`form-control ${validity.nombre === null
+                        ? "bgInput"
                         : validity.nombre
                           ? "is-valid"
                           : "is-invalid"
@@ -93,7 +94,6 @@ function ModalRegistrarse({ show, handleClose }) {
                     onChange={(e) => handleChange("nombre", e.target.value)}
                     required
                   />
-
                 </div>
 
                 <div className="mb-3 w-100">
@@ -108,8 +108,8 @@ function ModalRegistrarse({ show, handleClose }) {
                     id="apellidoRegistro"
                     placeholder="Ingrese su apellido"
                     maxLength="25"
-                    className={`form-control bgInput ${validity.apellido === null
-                        ? ""
+                    className={`form-control ${validity.apellido === null
+                        ? "bgInput"
                         : validity.apellido
                           ? "is-valid"
                           : "is-invalid"
@@ -133,14 +133,14 @@ function ModalRegistrarse({ show, handleClose }) {
                   id="domicilioRegistro"
                   placeholder="Ingrese su domicilio"
                   maxLength="25"
-                  className={`form-control bgInput ${validity.domicilio === null
-                        ? ""
-                        : validity.domicilio
-                          ? "is-valid"
-                          : "is-invalid"
-                      }`}
-                    value={formValues.domicilio}
-                    onChange={(e) => handleChange("domicilio", e.target.value)}
+                  className={`form-control ${validity.domicilio === null
+                      ? "bgInput"
+                      : validity.domicilio
+                        ? "is-valid"
+                        : "is-invalid"
+                    }`}
+                  value={formValues.domicilio}
+                  onChange={(e) => handleChange("domicilio", e.target.value)}
                   required
                 />
               </div>
@@ -157,14 +157,14 @@ function ModalRegistrarse({ show, handleClose }) {
                   id="telefonoRegistro"
                   placeholder="Ingrese su teléfono"
                   maxLength="10"
-                  className={`form-control bgInput ${validity.telefono === null
-                        ? ""
-                        : validity.telefono
-                          ? "is-valid"
-                          : "is-invalid"
-                      }`}
-                    value={formValues.telefono}
-                    onChange={(e) => handleChange("telefono", e.target.value)}
+                  className={`form-control ${validity.telefono === null
+                      ? "bgInput"
+                      : validity.telefono
+                        ? "is-valid"
+                        : "is-invalid"
+                    }`}
+                  value={formValues.telefono}
+                  onChange={(e) => handleChange("telefono", e.target.value)}
                   required
                 />
               </div>
@@ -177,14 +177,14 @@ function ModalRegistrarse({ show, handleClose }) {
                   type="email"
                   id="emailRegistro"
                   placeholder="Ingrese su email"
-                  className={`form-control bgInput ${validity.email === null
-                        ? ""
-                        : validity.email
-                          ? "is-valid"
-                          : "is-invalid"
-                      }`}
-                    value={formValues.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
+                  className={`form-control ${validity.email === null
+                      ? "bgInput"
+                      : validity.email
+                        ? "is-valid"
+                        : "is-invalid"
+                    }`}
+                  value={formValues.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
                   required
                 />
               </div>
@@ -204,12 +204,12 @@ function ModalRegistrarse({ show, handleClose }) {
                       placeholder="Ingrese su contraseña"
                       minLength="8"
                       maxLength="20"
-                      className={`form-control bgInput pe-5 ${validity.password === null
-                        ? ""
-                        : validity.password
-                          ? "is-valid"
-                          : "is-invalid"
-                      }`}
+                      className={`form-control ${validity.password === null
+                          ? "bgInput"
+                          : validity.password
+                            ? "is-valid-password"
+                            : "is-invalid-password"
+                        }`}
                       value={formValues.password}
                       onChange={(e) => handleChange("password", e.target.value)}
                       required
@@ -236,14 +236,16 @@ function ModalRegistrarse({ show, handleClose }) {
                       placeholder="Repita su contraseña"
                       minLength="8"
                       maxLength="20"
-                      className={`form-control bgInput pe-5 ${validity.passwordRepeat === null
-                        ? ""
-                        : validity.passwordRepeat
-                          ? "is-valid"
-                          : "is-invalid"
-                      }`}
+                      className={`form-control ${validity.passwordRepeat === null
+                          ? "bgInput"
+                          : validity.passwordRepeat
+                            ? "is-valid-password"
+                            : "is-invalid-password"
+                        }`}
                       value={formValues.passwordRepeat}
-                      onChange={(e) => handleChange("passwordRepeat", e.target.value)}
+                      onChange={(e) =>
+                        handleChange("passwordRepeat", e.target.value)
+                      }
                       required
                     />
                     <i
